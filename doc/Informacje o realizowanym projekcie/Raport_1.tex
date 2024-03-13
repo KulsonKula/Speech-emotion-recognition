@@ -1,0 +1,124 @@
+\documentclass[12pt,titlepage]{article}
+
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    total={210mm,297mm},
+    left=20mm,
+    right=20mm,
+    top=20mm,
+    bottom=20mm,
+}
+
+	
+\usepackage[]{subcaption}
+
+\usepackage{pdflscape}
+
+% Polski
+\usepackage[]{polski} 
+\usepackage[polish]{babel}
+
+%do tabel
+\usepackage{multirow}
+
+% Pierwszy akapit - wcięty
+\usepackage[]{indentfirst}
+
+% Matematyka
+\usepackage[]{amsfonts}
+
+\usepackage[]{amsmath}
+
+% Formatowanie
+\usepackage{ragged2e}
+
+% Tytuły sekcji
+\usepackage{titlesec}
+%\titleformat{\section}[block]{\Large\bfseries}{}{1em}{}
+
+% <=
+\usepackage{amssymb}
+
+% eps
+\usepackage{graphicx}
+% \usepackage{subfigure}
+
+% Tabele
+\usepackage{array}
+
+\usepackage[style=czech]{csquotes}
+
+\renewcommand*{\thesubsubsection}{}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\usepackage[numbered]{matlab-prettifier}
+\lstset{
+    literate={ą}{{\k{a}}}1
+    {Ą}{{\k{A}}}1
+    {ę}{{\k{e}}}1
+    {Ę}{{\k{E}}}1
+    {ó}{{\'o}}1
+    {Ó}{{\'O}}1
+    {ś}{{\'s}}1
+    {Ś}{{\'S}}1
+    {ł}{{\l{}}}1
+    {Ł}{{\L{}}}1
+    {ż}{{\.z}}1
+    {Ż}{{\.Z}}1
+    {ź}{{\'z}}1
+    {Ź}{{\'Z}}1
+    {ć}{{\'c}}1
+    {Ć}{{\'C}}1
+    {ń}{{\'n}}1
+    {Ń}{{\'N}}1
+}
+
+\title{
+\includegraphics[scale=0.75]{img/politechnika_sl_logo_bw_poziom_pl.eps}\\
+\textbf{Wydział Automatyki, Elektroniki\\
+i Informatyki}\\
+\vspace*{1cm}
+Systemy Interaktywne i Multimedialne \\ Projekt \\ Detekcja emocji w głosie
+
+\vspace*{5cm}
+}
+\author{
+Natalia Stręk
+Jakub Kula,
+Paweł Wójtowicz,
+} 
+\date{Gliwice 2023}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\newpage
+\section{Analiza wyników i wnioski}
+Nazwę projektu
+
+Wizję projektu:
+W tej części należy przedstawić cel projektu oraz jakie korzyści niesie jego wykonanie (ok 100 słów)\\
+
+Cele projektu
+Przedstawienie 2-5 konkretnych celów które należy wykonać by projekt zrealizował określoną wizję\\
+
+Zakres projektu
+Zakres definiuje granice projektu przedstawiając co zostanie wykonane w ramach projektu, a co nie. To co zostanie wykonane powinno zostać ujęte za pomocą konkretnych, mierzalnych rezultatów. (ok 200 słów)\\
+
+Etapy w projekcie
+Określenie co zostało zaakceptowane do wykonania obecnie oraz w jaki sposób kolejne etapy będą akceptowane.\\
+
+Charakterystykę narzędzi, za pomocą których projekt zostanie wykonany (ok 100 słów)
+\end{document}

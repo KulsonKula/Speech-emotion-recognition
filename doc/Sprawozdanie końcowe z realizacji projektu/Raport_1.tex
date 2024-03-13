@@ -1,0 +1,124 @@
+\documentclass[12pt,titlepage]{article}
+
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    total={210mm,297mm},
+    left=20mm,
+    right=20mm,
+    top=20mm,
+    bottom=20mm,
+}
+
+	
+\usepackage[]{subcaption}
+
+\usepackage{pdflscape}
+
+% Polski
+\usepackage[]{polski} 
+\usepackage[polish]{babel}
+
+%do tabel
+\usepackage{multirow}
+
+% Pierwszy akapit - wcięty
+\usepackage[]{indentfirst}
+
+% Matematyka
+\usepackage[]{amsfonts}
+
+\usepackage[]{amsmath}
+
+% Formatowanie
+\usepackage{ragged2e}
+
+% Tytuły sekcji
+\usepackage{titlesec}
+%\titleformat{\section}[block]{\Large\bfseries}{}{1em}{}
+
+% <=
+\usepackage{amssymb}
+
+% eps
+\usepackage{graphicx}
+% \usepackage{subfigure}
+
+% Tabele
+\usepackage{array}
+
+\usepackage[style=czech]{csquotes}
+
+\renewcommand*{\thesubsubsection}{}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\usepackage[numbered]{matlab-prettifier}
+\lstset{
+    literate={ą}{{\k{a}}}1
+    {Ą}{{\k{A}}}1
+    {ę}{{\k{e}}}1
+    {Ę}{{\k{E}}}1
+    {ó}{{\'o}}1
+    {Ó}{{\'O}}1
+    {ś}{{\'s}}1
+    {Ś}{{\'S}}1
+    {ł}{{\l{}}}1
+    {Ł}{{\L{}}}1
+    {ż}{{\.z}}1
+    {Ż}{{\.Z}}1
+    {ź}{{\'z}}1
+    {Ź}{{\'Z}}1
+    {ć}{{\'c}}1
+    {Ć}{{\'C}}1
+    {ń}{{\'n}}1
+    {Ń}{{\'N}}1
+}
+
+\title{
+\includegraphics[scale=0.75]{img/politechnika_sl_logo_bw_poziom_pl.eps}\\
+\textbf{Wydział Automatyki, Elektroniki\\
+i Informatyki}\\
+\vspace*{1cm}
+Systemy Interaktywne i Multimedialne \\ Projekt \\ Detekcja emocji w głosie
+
+\vspace*{5cm}
+}
+\author{
+Natalia Stręk
+Jakub Kula,
+Paweł Wójtowicz,
+} 
+\date{Gliwice 2023}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\newpage
+\section{Analiza wyników i wnioski}
+Przedstawić najważniejsze scenariusze użycia stworzonego oprogramowania(zazwyczaj od 3 do 6 scenariuszy). Scenariusze zilustrować zrzutami ekranowymi, do których referencje mają znaleźć się w tekście.\\
+
+Do sprawozdania można dołączyć wideo prezentujące użycie scenariuszy (w osobnym pliku sprawozdania). Także w tym wypadku zespół, może być nadal zobowiązany do prezentacji wyników projektu na zajęciach.\\
+
+Czy projekt zrealizowany został zgodnie z założeniami? Jeśli nie,podać przyczyny odstępstw od pierwotnych założeń. Należy odnieść się do zaakceptowanego dokumentu Informacje o realizowanym projekcie (ok 100 słów)\\
+
+Czy projekt zrealizowany został zgodnie z harmonogramem? Jeśli nie, podać przyczyny opóźnień w odniesieniu do etapów pracy oraz opisać działania naprawcze podjęte aby osiągnąć wyznaczone cele projektu.\\
+
+Czy wystąpiły jakieś nadzwyczajne wydarzenia w trakcie realizacji projektu? Czy wprowadzono jakieś znaczące zmiany do zrealizowanych działań lub w składzie zespołu? Jeśli tak, opisać jakie oraz podać ich wpływ na realizację projektu.\\
+
+Doświadczenia uzyskane podczas realizacji projektu. Opisać jaką nową wiedzę uzyskał uczestnik projektu w czasie jego realizacji np. nowe metody programowania, nowe biblioteki, nowe narzędzie itp. (ok 200 słów)\\
+
+Proponowane ulepszenia projektu. Opisać możliwe zmiany w systemie, użytej technologii, narzędziach, które mogłyby prowadzić do ulepszenia projektu.\\
+
+Dodać skompresowany kod źródłowy (w osobnym pliku sprawozdania)
+\end{document}
