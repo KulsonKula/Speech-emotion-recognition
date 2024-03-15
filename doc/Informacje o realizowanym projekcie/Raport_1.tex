@@ -108,25 +108,45 @@ Paweł Wójtowicz
 
 
 \section{Wizja projektu}
-W tej części należy przedstawić cel projektu oraz jakie korzyści niesie jego wykonanie (ok 100 słów)\\
+DO TO NAPISAĆ TO!
+\begin{itemize}
+    \item prexyxyjna detekcja acc>=60\%
+    \item efektyność w czasie rzeczywistym
+\end{itemize}
 
 \section{Cele projektu}
-Przedstawienie 2-5 konkretnych celów które należy wykonać by projekt zrealizował określoną wizję\\
+\begin{itemize}
+    \item Opracowanie modelu uczenia maszynowego, który będzie potrafił rozpoznawać emocje w nagraniach głosowych.
+    \item Stworzenie interaktywnego narzędzia umożliwiającego przesłanie nagrania głosowego i otrzymanie informacji zwrotnej na temat emocji wykrytych w głosie.
+\end{itemize}
 
 \section{Zakres projektu}
+DO TO NAPISAĆ TO!
+Zakres projektu będzie obejomwać wybór odpowiednich danych. Dane muszą zawierać odpowiednią ilość nagrań oraz obejmowac odpowiednią ilość emocji.
+Następnym krokiem będzie wybór odpowiednich cech które posłużą do nauczenia modelu. Po wyborze odpowiednich cech zostanie sporządzony skrypt przetwarzające wybrane dane. Kolejnym etapem będą badania nad achiterkórą i zestawem hisperparamterów które zapewnią najwyższy wspólcznnik dokłądności. Następnie zostanie wybrana o
+
 Zakres definiuje granice projektu przedstawiając co zostanie wykonane w ramach projektu, a co nie. To co zostanie wykonane powinno zostać ujęte za pomocą konkretnych, mierzalnych rezultatów. (ok 200 słów)\\
 
 \section{Etapy w projekcie}
-Określenie co zostało zaakceptowane do wykonania obecnie oraz w jaki sposób kolejne etapy będą akceptowane.\\
+\begin{itemize}
+    \item Znalezienie nagrań głosowych przedstawiające różne emocje.
+    \item Reserach na temat sygnałów dzwiękowych i ich cech
+    \item Wybór cech które posłużą do nauki modelu uczenia maszynowego
+    \item Przetworzenie nagrań głosowych, wyciąganiecie z nich cech charakterystyczych
+    \item wybór metody kroswalidacji
+    \item Strojenie i wybór architektóry sieci oraz jej hisperparamterów przy użyciu wyników z kroswalidacji
+    \item Stworzenie UI pozwalajacego użytkownikowi dodanie pliku dzwiękowego oraz nagrania własnej wiadomości przy pomocy wbudowanego mikrofonu
+    \item Testowanie projektu
+\end{itemize}
 
 \section{Charakterystykę narzędzi}
-za pomocą których projekt zostanie wykonany (ok 100 słów)
 \begin{itemize}
-    \item Python
-    \item Tensorflow
-    \item Numpy i Pandas
-    \item librosa
-    \item Sckit-lern, Eli5, LIME
-    \item Conda
+    \item Python - główny jezyk programowania. W nim zostaną napisane skrypty przetwarzajace dane oraz zostanie stworzony i nauczony model sieci neuronowe.
+    \item Tensorflow i keras - Tenforflow będąca najpopularniejszą bibloteką uczenia maszynowego stanowi główne narzędzie do tworzenia sieci neuronowek. Keras udostępnia API do tworzenia modeli uczenia maszynowego.
+    \item Numpy i Pandas - fundamentalne bibloteki do obliczeń naukowych w pythonie, umozliwiające efektyne przetwarzania dużych ilości danych oraz ich wnikliwą analize
+    \item Librosa - bibloteka pozwalająca w łatwy sposób otworzyć i przetworzyć dane audio.
+    \item Sckit-lern, Eli5 - bibloteki zawierające miedzy innymi bogaty zbiór algrytmów uczenia maszynowego. Pozwalające na uproszcznie etapu tworzenia sieci.
+    \item Conda - Conda jest środowiskiem wirtualnym i systemem do zarządzania pakietami. Pozwala ona na tworzenie odseparowanych środowisk dla różnych projektów.
+    \item Tkinter - bibloteka pozwalająca nam uprościc proces tworzenia działajacego interfejsu graficznego.
 \end{itemize}
 \end{document}
