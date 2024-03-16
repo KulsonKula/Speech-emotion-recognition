@@ -108,33 +108,34 @@ Paweł Wójtowicz
 
 
 \section{Wizja projektu}
-DO TO NAPISAĆ TO!
-\begin{itemize}
-    \item prexyxyjna detekcja acc>=60\%
-    \item efektyność w czasie rzeczywistym
-\end{itemize}
+Projekt ten ma na celu stworzenie systemu zdolnego do detekcji emocji w ludzkim głosie takich jak radość, smutek, złość czy strach. Człowiek przede wszystkim rozpoznaje emocje za pomocą komunikacji niewerbalnej. Dobra sztuczna inteligencja powinna więc być zdolna do lepszego rozpoznawania emocji w głosie człowieka, wykorzystując do tego nieoczywiste i niezauważalne wzorce, które są trudne do dostrzeżenia na pierwszy rzut oka. System będzie zrealizowany przy wykorzystaniu technologi do przetwarzania sygnałów dźwiękowych jak i sztucznej inteligencji. Realizacja tego projektu może przynieść korzyści w usprawnieniu interakcji człowiek-maszyna dzięki czemu maszyna będzie mogła lepiej zrozumieć intencje oraz potrzeby użytkownika. Inną korzyścią płynącą z tego projektu może być badanie nad dynamiką emocji w mediach społecznościowych i transmisiach na żywo co pozwoli na lepsze zrozumienie reakcji społecznych. Wraz z rozwojem projektu, możliwe jest również zastosowanie detekcji emocji w ludzkim głosie obszarach takich jak medycyna. Takie systemy mogą być szczególnie pomocne w diagnozowaniu i leczeniu zaburzeń zdrowia psychnicznego.
 
 \section{Cele projektu}
 \begin{itemize}
     \item Opracowanie modelu uczenia maszynowego, który będzie potrafił rozpoznawać emocje w nagraniach głosowych.
+          % \item Porównanie stworzonego modelu z istniejącymi już modelami do rozpoznawania emocji w głosie
     \item Stworzenie interaktywnego narzędzia umożliwiającego przesłanie nagrania głosowego i otrzymanie informacji zwrotnej na temat emocji wykrytych w głosie.
 \end{itemize}
 
 \section{Zakres projektu}
-DO TO NAPISAĆ TO!
-Zakres projektu będzie obejomwać wybór odpowiednich danych. Dane muszą zawierać odpowiednią ilość nagrań oraz obejmowac odpowiednią ilość emocji.
-Następnym krokiem będzie wybór odpowiednich cech które posłużą do nauczenia modelu. Po wyborze odpowiednich cech zostanie sporządzony skrypt przetwarzające wybrane dane. Kolejnym etapem będą badania nad achiterkórą i zestawem hisperparamterów które zapewnią najwyższy wspólcznnik dokłądności. Następnie zostanie wybrana o
+Projekt obejmuje stworzenie systemu zdolnego do detekcji szerokiego zakresu emocji w ludzkim głosie, włączając w to radość, smutek, złość, zaskoczenie, obojętność, spokój, odraza i strach. Wykorzystując technologie do przetwarzania sygnałów dźwiękowych oraz sztucznej inteligencji, projekt będzie skoncentrowany na identyfikację wzorców w ludzkim głosie, które mogą wskazywać na określoną emocję.
 
-Zakres definiuje granice projektu przedstawiając co zostanie wykonane w ramach projektu, a co nie. To co zostanie wykonane powinno zostać ujęte za pomocą konkretnych, mierzalnych rezultatów. (ok 200 słów)\\
+W ramach projektu zostanie opracowany i przetestowany model uczenia maszynowego o określonej dokładności w rozpoznawaniu emocji w ludzkim głosie, stworzenie interaktywnego interfejsu użytkownika pozwalającego na przesłanie nagrania głosowego i otrzymanie odpowiedzi na tematy wykrytych emocji.
+
+Projekt skupia się wyłącznie na analizie emocji w ludzkim głosie i nie obejmuje dodatkowych analiz, takich jak funkcje przetwarzania języka naturalnego w celu lepszego zrozumienia kontekstu emocjonalnego, ani rozpoznawanie emocji w innych formach komunikacji niewerbalnej, takich jak mimika twarzy czy wykonywane gesty. Dodatkowo, projekt skoncentrowany jest wyłącznie na identyfikacji emocji w nagraniach głosowych i nie będzie obejmować analizy innych źródeł danych.
+
+% Zakres projektu obejmuje stworzenie modelu uczenia maszynowego będącego w stanie dokonywać detekcji emocji w nagraniach głosowych oraz opracowanie interaktywnego narzędzia umożliwiającego analizę dostarczonego nagrania głosowego i zwrócenie informacji zwrotnej na temat wykrytej emocji w głosie.
+
+% Zakres definiuje granice projektu przedstawiając co zostanie wykonane w ramach projektu, a co nie. To co zostanie wykonane powinno zostać ujęte za pomocą konkretnych, mierzalnych rezultatów. (ok 200 słów)\\
 
 \section{Etapy w projekcie}
 \begin{itemize}
-    \item Znalezienie nagrań głosowych przedstawiające różne emocje.
-    \item Reserach na temat sygnałów dzwiękowych i ich cech
-    \item Wybór cech które posłużą do nauki modelu uczenia maszynowego
-    \item Przetworzenie nagrań głosowych, wyciąganiecie z nich cech charakterystyczych
-    \item wybór metody kroswalidacji
-    \item Strojenie i wybór architektóry sieci oraz jej hisperparamterów przy użyciu wyników z kroswalidacji
+    \item Zgromadzenie i przetworzenie danych - dane w postaci krótkich nagrań dźwiękowych reprezentujące różne emocje.
+    \item Wybór oraz ekstrakcja cech.
+    \item Wybór architektury sieci, hiperparametrów, podział danych na zbiór uczący oraz treningowy.
+    \item Trenowanie modelu i optymalizacja parametrów modelu.
+    \item Ocena i walidacja modelu.
+    \item Dostosowywanie parametrów modelu w celu poprawy jego wydajności.
     \item Stworzenie UI pozwalajacego użytkownikowi dodanie pliku dzwiękowego oraz nagrania własnej wiadomości przy pomocy wbudowanego mikrofonu
     \item Testowanie projektu
 \end{itemize}
