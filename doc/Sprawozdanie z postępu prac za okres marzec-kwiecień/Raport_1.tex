@@ -136,13 +136,15 @@ Została także wytrenowana sieć która osiąga 68\% dokładności. Jendak podc
 
 \includegraphics[width=\linewidth]{img/error_matrix.png}
 
+Do tej pory przeprowadzono wybór danych, ich przetwarzanie oraz ekstrakcję cech. Dodatkowo dokonano doboru architektury sieci neuronowej oraz stworzono modele uczenia maszynowego, które klasyfikują nagrania głosowe. Modele zostały poddane ocenie i walidacji w celu sprawdzenia ich dokładności i skuteczności w przewidywaniu oraz klasyfikacji. Ze względu na nieustanne poszukiwanie coraz doskonalszych modeli, proces ten pozostaje w ciągłej realizacji, dążenie do optymalizacji modelu wymaga ciągłego testowania oraz wprowadzania ulepszeń w celu osiągnięcia jak najskuteczniejszego modelu w klasyfikacji nagrań. Na ten moment szacujemy, że około 60\% projektu zostało już zrealizowane.
+
 % Czy projekt realizowany jest zgodnie z harmonogramem? Jeśli nie, podać przyczyny opóźnień w odniesieniu do etapów pracy oraz opisać działania naprawcze mających na celu osiągnięcie celów i wyników projektu\\
 Projekt jest realizowany zgodnie z harmonogramem.\\
 
 % Czy wprowadzono jakieś znaczące zmiany do zrealizowanych działań lub w składzie zespołu? Jeśli tak, opisać jakie oraz podać ich wpływ na realizację projektu.
 \subsection{Dodatkowy zbiór danych}
 Wprowadzono następujące zmiany w założeniach projektu:
-Dodano kolejny zbiór nagrań. Zbiór TESS  Toronto emotional speech set posiada aż 2800 nagrań podzielonych na 6 klas.  Do projektu użytko tylko nagrań audio. Klasy to: neutral, happy, sad, angry, fearful, surprise i disgust. Zbiór TESS nie posiada emocji calm który posiadał zbiór Ravdess.\\
+Dodano kolejny zbiór nagrań. Zbiór TESS  Toronto emotional speech set posiada aż 2800 nagrań podzielonych na 6 klas.  Do projektu użytko tylko nagrań audio. Klasy to: neutral, happy, sad, angry, fearful, surprise i disgust. Zbiór TESS nie posiada emocji calm który posiadał zbiór Ravdess. Wykorzystanie dodatkowego zbioru pozwala na wprowadzenie większej różnorodności dlatego też model ten może lepiej osiągąć lepszą dokładność w klasyfikacji nowych danych.\\
 Kolejną zmianą jest zmniejszenie długości nagrań głosowych do jednej sekundy. Zostało to zastosowane ze względu na to, że wszystkie nagrania muszą mieć taką samą długość, a dane z nowego zbioru są znacząco krótsze. Dane ze zbioru Ravdess zostały użyte od 0.6s do 1.6s.
 
 \end{document}
