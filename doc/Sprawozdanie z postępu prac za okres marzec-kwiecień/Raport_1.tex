@@ -107,15 +107,18 @@ Paweł Wójtowicz,
 \newpage
 \section{Analiza wyników i wnioski}
 % Cele i zadania z okresu objętego sprawozdaniem, których realizację już podjęto. Należy odnieść się do zaakceptowanego dokumentu Informacje o realizowanym projekcie (ok 100 słów)\\
-Celami wybranymi na okres marzec-kwiecień było napisanie wykonanie odpowiedniego research na temat przetwarzania ludzkiego głosu, oraz parametrów go charakteryzujących. Kolejnym celem było skryptu przetwarzającego dane, wyciagającego opisane charakterystyczne parametry. Ostatnim celem na okres było stworzenie modelu sieci neuronowej posiadajacej minium 50\% dokładności. Jest to model referencyjny do którego będą porónywane kolejne stworzone modele.\\
+\subsection{Cele i zadania z okresu maczec-kwiecień}
+Cele wyznaczone na okres marzec-kwiecień obejmowały przede wszystkim zgłębienie wiedzy na temat przetwarzania plików audio oraz zidentyfikowanie cech, które można wykorzystać w procesie nauki modelu uczenia maszynowego. W szczególności chodziło o poznanie technik ekstrakcji cech i analizy dźwięku, aby lepiej zrozumieć, jakie elementy są istotne z punktu widzenia efektywności modelu.
+Następnym etapem było stworzenie odpowiedniego skryptu do przetwarzania danych, który umożliwiłby ekstrakcję wcześniej zidentyfikowanych charakterystycznych cech. Ostatnim postawionym celem na ten okres było stworzenie modelu sieci neuronowej posiadajacej minium 50\% dokładności, który by służył jako model referencyjny do którego będą porónywane kolejne stworzone modele.\\
 
 % Opis zadań przyjętych do realizacji w okresie objętym sprawozdaniem w odniesieniu do poszczególnych etapów pracy. Które z zadań zostały wykonane? Które z zadań są realizowane? Jaki jest procentowy postęp prac? Ile przeznaczono czasu na wykonanie poszczególnych zadań? (ok 300 słów)\\
-
-W trakcie okrsu marzec-kwiecień zostały wybrane cechy dziwięku które zostały użyte jako wejścia do sieci neuronowej.
-
-Wybrane parametry sieci:
+\subsection{Opis zadań przyjętych do realizacji}
+\subsubsection{Zgromadzenie i przetworzenie danych}
+Aby stworzyć model klasyfikacji emocji z dźwięku, wykorzystano dane z dwóch źródeł: Ravdess i TESS. Pierwotnie planowano wykorzystać wyłącznie zbiór Ravdess, jednak w celu zwiększenia różnorodności i objętości danych, do projektu włączono również zbiór TESS.
+\subsubsection{Wybór oraz ekstrakcja cech}
+W trakcie okresu marzec-kwiecień zostały wybrane cechy dziwięku które zostały użyte jako wejścia do sieci neuronowej. Wybrane wejścia do sieci to:
 \begin{itemize}
-    \item \textbf{Chroma STFT}: Reprzentacja częstotliwości dźwięku w sposób związany z tonalnością, używana w analizie akordów i melodii.
+    \item \textbf{Chroma STFT}: Reprezentacja częstotliwości dźwięku w sposób związany z tonalnością, używana w analizie akordów i melodii.
     \item \textbf{MFCC}: Kompaktowa reprezentacja dźwięku, oparta na skali melowej, często stosowana w rozpoznawaniu mowy i dźwięku.
     \item \textbf{Root Mean Square Value}: Średnia wartość kwadratu sygnału dźwiękowego, stosowana do oceny głośności.
     \item \textbf{Spectral Centroid}: Średnia częstotliwość w spektrum dźwięku, służy do oceny barwy dźwięku.
@@ -125,16 +128,19 @@ Wybrane parametry sieci:
     \item \textbf{Chroma Vector}: Wektor reprezentujący rozkład mocy dźwięku w chromie, używany w analizie harmonicznej.
     \item \textbf{MelSpectrogram}: Spektrogram dźwięku, gdzie skala częstotliwości jest przekształcona na skalę melową, co odzwierciedla sposób, w jaki ludzkie ucho percepcyjnie odbiera dźwięki.
 \end{itemize}
+W celu zmniejszenia wymiarowości danych, została wyciągnięta średnia z każdej cechy z każdego segmentu czasowego.\\
+\subsubsection{Wybór architektury sieci oraz trenowanie modelu}
+W realizowanym projekcie wykorzystano konwolucyjne sieci neuronowe (CNN), architektura ta wykorzystuje takie warstwy jak konwolucyjne do wykrywania wzorców, poolingowe do redukcji wymiarów oraz z warst gęstych do końcowej klasyfikacji.
 
-W celu zmniejszenia wymiarowości/ilości wejść do sieci, została wyciągnięta średnia z każdego parametru z każdego segmentu czasowego.\\
+Została także wytrenowana sieć która osiąga 68\% dokładności. Jendak podczas testów na zbiorze testowym osiąga ta sieć dokładność rzędu 45\%, co wskazuje na znaczącą różnicę w wydajności między zbiorem uczącym a testowym.\\
 
-Została także wytrenowana sieć podstawowa. Sieć tak osiąga 68\% dokładności na zbiorze uczącym oraz 45\% na zbiorze testującym.\\
 \includegraphics[width=\linewidth]{img/error_matrix.png}
 
 % Czy projekt realizowany jest zgodnie z harmonogramem? Jeśli nie, podać przyczyny opóźnień w odniesieniu do etapów pracy oraz opisać działania naprawcze mających na celu osiągnięcie celów i wyników projektu\\
 Projekt jest realizowany zgodnie z harmonogramem.\\
 
 % Czy wprowadzono jakieś znaczące zmiany do zrealizowanych działań lub w składzie zespołu? Jeśli tak, opisać jakie oraz podać ich wpływ na realizację projektu.
+\subsection{Dodatkowy zbiór danych}
 Wprowadzono następujące zmiany w założeniach projektu:
 Dodano kolejny zbiór nagrań. Zbiór TESS  Toronto emotional speech set posiada aż 2800 nagrań podzielonych na 6 klas.  Do projektu użytko tylko nagrań audio. Klasy to: neutral, happy, sad, angry, fearful, surprise i disgust. Zbiór TESS nie posiada emocji calm który posiadał zbiór Ravdess.\\
 Kolejną zmianą jest zmniejszenie długości nagrań głosowych do jednej sekundy. Zostało to zastosowane ze względu na to, że wszystkie nagrania muszą mieć taką samą długość, a dane z nowego zbioru są znacząco krótsze. Dane ze zbioru Ravdess zostały użyte od 0.6s do 1.6s.
