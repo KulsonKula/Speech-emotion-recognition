@@ -14,6 +14,9 @@
 
 
 *.csv
+tutorial-env/
+*model.h5
+.h5
 
 ## Intermediate documents:
 *.dvi

@@ -19,7 +19,7 @@ def predict_emotion(model, features):
         8:"surprised"
     }
     predict = model.predict(features)
-    idx =  np.argmax(predict)
+    idx = np.argmax(predict)
 
     return emotion[idx]
   

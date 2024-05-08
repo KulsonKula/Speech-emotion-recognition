@@ -22,7 +22,7 @@ def extract_features(data, sample_rate):
     rms = np.mean(librosa.feature.rms(y=data).T, axis=0)
     features = np.hstack((features, rms))
 
-        #Spectral centroid
+    #Spectral centroid
     sc = np.mean(librosa.feature.spectral_centroid(y=data, sr=sample_rate).T, axis=0)
     features = np.hstack((features, sc))
 
@@ -49,11 +49,9 @@ def extract_features(data, sample_rate):
     X = []
     X.append(features)
     Features = pd.DataFrame(X)
-    X = Features.iloc[: ,:-1].values
-    
+    X = Features.iloc[: ,:].values
     return X
 
 def preprocess_audio(filepath):
     data, sample_rate = librosa.load(filepath, duration=2.5, offset=0.6)
-
     return data, sample_rate
