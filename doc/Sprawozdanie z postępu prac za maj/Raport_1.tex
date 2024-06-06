@@ -15,6 +15,9 @@
 
 \usepackage{pdflscape}
 
+\usepackage{graphicx}
+\usepackage{subcaption}
+
 % Polski
 \usepackage[]{polski} 
 \usepackage[polish]{babel}
@@ -106,14 +109,45 @@ Paweł Wójtowicz,
 
 \newpage
 \section{Analiza wyników i wnioski}
-Cele i zadania z okresu objętego sprawozdaniem, których realizację już podjęto. Należy odnieść się do zaakceptowanego dokumentu Informacje o realizowanym projekcie (ok 100 słów)\\
+% Cele i zadania z okresu objętego sprawozdaniem, których realizację już podjęto. Należy odnieść się do zaakceptowanego dokumentu Informacje o realizowanym projekcie (ok 100 słów)\\
+Głónym celem na maj było stworzono UI pozwalające na wybranie pliku dźwiękowego oraz nagranie wiadomości głosowej, używając Tkinter, z którego zostają wyciąganięte parametry służące do predykcji emocji. Celem dodatkowym była ciągła praca nad siecią neruonową w celu poprawy doładności na zbiorze tesotwym.
 
-Opis zadań przyjętych do realizacji w okresie objętym sprawozdaniem w odniesieniu do
-poszczególnych etapów pracy. Które z zadań zostały wykonane? Które z zadań są realizowane? Jaki jest procentowy postęp prac? Ile przeznaczono czasu na wykonanie poszczególnych zadań? (ok 300 słów)\\
+% Opis zadań przyjętych do realizacji w okresie objętym sprawozdaniem w odniesieniu do
+% poszczególnych etapów pracy. Które z zadań zostały wykonane? Które z zadań są realizowane? Jaki jest procentowy postęp prac? Ile przeznaczono czasu na wykonanie poszczególnych zadań? (ok 300 słów)\\
 
-Czy projekt realizowany jest zgodnie z harmonogramem? Jeśli nie, podać przyczyny opóźnień w odniesieniu do etapów pracy oraz opisać działania naprawcze mających na celu osiągnięcie celów i wyników projektu\\
+\subsection{UI}
+UI jest zaprojektowane w sposób intuicyjny, umożliwiając użytkownikom łatwe dodanie pliku dźwiękowego oraz nagranie własnej wiadomości przy użyciu wbudowanego mikrofonu.
 
-Czy wprowadzono jakieś znaczące zmiany do zrealizowanych działań lub w składzie zespołu? Jeśli tak, opisać jakie oraz podać ich wpływ na realizację projektu.
+\begin{figure}[ht]
+    \centering
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/1.png}
+        \label{fig:sub1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/2.png}
+        \label{fig:sub2}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/3.png}
+        \label{fig:sub3}
+    \end{subfigure}
+    \label{fig:main}
+\end{figure}
+Prace nad interfejsem użytkownika są w toku. Dotychczas stworzono pierwszy zarys UI, który umożliwia użytkownikom dodawanie plików dźwiękowych oraz nagrywanie wiadomości za pomocą wbudowanego mikrofonu. Interfejs jest zaprojektowany tak, aby był intuicyjny i łatwy w obsłudze. Na obecnym etapie prace nad UI są zaawansowane w 80\%. Planowane są dalsze udoskonalenia, w tym integracja z modelem analizy emocji oraz poprawa responsywności i estetyki interfejsu. Celem jest zapewnienie użytkownikom wygodnego i efektywnego narzędzia do interakcji z systemem.
+
+\subsection{Dokładność sieci}
+W ramach prac nad dokładnością modelu, zostały wykonane testy optymaliacji hiperparametrów sieci.Proces dostosowywania parametrów modelu jest kluczowym krokiem w optymalizacji jego wydajności. Obejmuje to fine-tuning hiperparametrów, takich jak współczynnik uczenia, liczba neuronów w warstwach ukrytych oraz liczba epok treningowych. Dotychczasowe testy sugerują, że dostosowanie tych parametrów może znacząco poprawić dokładność modelu w rozpoznawaniu emocji. Wykazały one, że zwiększeni skomplikowania modelu, spowodowało zmniejszenie biasu, co poskutkowało znacznie lepszymi wynikami kroswalidacji. Obecny najlepszy model osiąga wartośc 76\% dokładności na zbiorze testowym.
+\begin{center}
+    \includegraphics[width=\textwidth]{img/conf_matrix.png}
+\end{center}
+Można zauważyć, że nowy model znacząco lepiej radzi sobie z klasyfikacją emocji w głosie. Różnica w ilości cech w zbiorze testowym dla emocji "calm" wynika z wybranych zbiorów nagrań głosowych. Pierwszy z nich posiadał 8, a drugi, większy, tylko 7.\\
+Projekt jest realizowany zgodnie z harmonogramem oraz nie wprowadzono w tym etapie żadnych znaczących zmian odbiegających od niego.
 
 
 \end{document}
