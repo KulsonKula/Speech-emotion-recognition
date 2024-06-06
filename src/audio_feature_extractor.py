@@ -6,6 +6,9 @@ import sys
 import os
 import sounddevice
 from scipy.io.wavfile import write
+import matplotlib.pyplot as plt
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+from matplotlib.figure import Figure
 
 backgrd='gray16'
 foregrd='white'
@@ -21,20 +24,22 @@ class AudioFeatureExtractorApp:
         self.master = master
         master.title("Audio Feature Extraction")
 
-        self.model = model.load_model("model.h5")
+        self.model = model.load_model("best_model.h5")
 
         self.create_widgets()
+        self.create_plot_canvas()
 
     def create_widgets(self):
 
         self.frame = tk.Frame(self.master, width=250, height=600, background=bckgrd2)
         self.frame.place(x=0,y=0)
 
+
         self.frameCentral = tk.Frame(self.master, width=450, height=450, background=bckgrd2)
         self.frameCentral.place(x=300,y=100)
 
         self.frameOutput = tk.Frame(self.frameCentral, width=150, height=50, background='gray40')
-        self.frameOutput.place(x=150,y=230)
+        self.frameOutput.place(x=150,y=300)
 
         self.label = tk.Label(self.master, text="Speech emotion recognition app", font=['Times new roman',18,'bold'], foreground='SpringGreen3', background=backgrd) 
         self.label.place(x=260,y=10)
@@ -49,17 +54,32 @@ class AudioFeatureExtractorApp:
         self.record_button.place(x=30,y=200)
 
         self.result_label = tk.Label(self.frameCentral, text="Detected emotion: ", font=['Times new roman',14,'bold'], background=bckgrd2,foreground=foregrd)
-        self.result_label.place(x=150,y=200)
+        self.result_label.place(x=150,y=280)
 
         self.labelCentral = tk.Label(self.frameCentral, text="The results of emotion recognition", font=['Times new roman',12,'bold'], foreground=foregrd, background=bckgrd2) 
         self.labelCentral.place(x=100,y=10)
 
     
-
+    def create_plot_canvas(self):
+        self.fig = Figure(figsize=(8, 4), dpi=50)
+        self.fig.set_facecolor('0.25')
+        self.ax = self.fig.add_subplot(111)
+        self.ax.set_facecolor('0.25')
+        self.ax.set_xlabel('Sample',color=foregrd,fontsize=15)
+        self.ax.set_ylabel('Amplitude',color=foregrd,fontsize=15)
+        self.ax.set_title('Audio wavefrom', color=foregrd,fontsize=15)
+        self.ax.tick_params(axis='x', colors=foregrd)  
+        self.ax.tick_params(axis='y', colors=foregrd)
+        self.canvas = FigureCanvasTkAgg(self.fig, master=self.frameCentral)
+        self.canvas.draw()
+        self.canvas.get_tk_widget().place(x=40, y=50)
 
 
     def process_audio_file(self, filepath):
         audio_data, sample_rate = audio_preprocessing.preprocess_audio(filepath)
+        self.ax.clear()
+        self.ax.plot(audio_data,color=foregrd)
+        self.canvas.draw()
         features = audio_preprocessing.extract_features(audio_data, sample_rate)
         predicted_emotion = model.predict_emotion(self.model, features)
 

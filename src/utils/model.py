@@ -9,13 +9,13 @@ def load_model(model_filename):
 
 def predict_emotion(model, features):
     emotion = {
-        1:"neutral",
-        2:"calm",
-        3:"happy",
-        4:"sad",
-        5:"angry",
-        6:"fearful",
-        7:"disgust",
+        1:"neutral  ",
+        2:"calm     ",
+        3:"happy    ",
+        4:"sad      ",
+        5:"angry    ",
+        6:"fearful  ",
+        7:"disgust  ",
         8:"surprised"
     }
     predict = model.predict(features)
