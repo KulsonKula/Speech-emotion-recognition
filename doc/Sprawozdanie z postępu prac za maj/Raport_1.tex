@@ -110,7 +110,7 @@ Paweł Wójtowicz,
 \newpage
 \section{Cele i zadania z okresu maj}
 % Cele i zadania z okresu objętego sprawozdaniem, których realizację już podjęto. Należy odnieść się do zaakceptowanego dokumentu Informacje o realizowanym projekcie (ok 100 słów)\\
-Głónym celem na maj było stworzono UI pozwalające na wybranie pliku dźwiękowego oraz nagranie wiadomości głosowej, używając Tkinter, z którego zostają wyciąganięte parametry służące do predykcji emocji. Celem dodatkowym była ciągła praca nad siecią neruonową w celu poprawy doładności na zbiorze tesotwym.
+Głónym celem na maj było stworzenie UI pozwalającego na wybranie pliku dźwiękowego oraz nagranie wiadomości głosowej, używając Tkinter, z którego zostają wyciąganięte parametry służące do predykcji emocji. Celem dodatkowym była ciągła praca nad siecią neruonową w celu poprawy doładności na zbiorze testowym.
 
 \section{Opis zadań przyjętych do realizacji}
 Do tego momentu zostały zrealizowane następujące zadania
@@ -123,9 +123,9 @@ Do tego momentu zostały zrealizowane następujące zadania
 \end{itemize}
 
 A następujące zadania zostały przyjęte do realizacji:
-\subsubsection{Stowrzenie UI}
+\subsubsection{Stworzenie UI}
 UI jest zaprojektowane w sposób intuicyjny, umożliwiając użytkownikom łatwe dodanie pliku dźwiękowego oraz nagranie własnej wiadomości przy użyciu wbudowanego mikrofonu.
-
+Aplikacja przyjmuje do dalszej analizy jedynie pliki z rozszerzeniem .wav oraz .mp3. Poniżej zamieszczono efekty dotychczasowej pracy.
 \begin{figure}[ht]
     \centering
     \begin{subfigure}[b]{0.3\textwidth}
@@ -147,18 +147,19 @@ UI jest zaprojektowane w sposób intuicyjny, umożliwiając użytkownikom łatwe
     \end{subfigure}
     \label{fig:main}
 \end{figure}
-Prace nad interfejsem użytkownika są w toku. Dotychczas stworzono pierwszy zarys UI, który umożliwia użytkownikom dodawanie plików dźwiękowych oraz nagrywanie wiadomości za pomocą wbudowanego mikrofonu. Interfejs jest zaprojektowany tak, aby był intuicyjny i łatwy w obsłudze. Na obecnym etapie prace nad UI są zaawansowane w 80\%. Planowane są dalsze udoskonalenia, w tym integracja z modelem analizy emocji oraz poprawa responsywności i estetyki interfejsu. Celem jest zapewnienie użytkownikom wygodnego i efektywnego narzędzia do interakcji z systemem.
+Prace nad interfejsem użytkownika są w toku. Dotychczas stworzono pierwszy zarys UI. Do nagrania pliku dźwiękowego wykorzystano bibliotekę sounddevice, w której można było ustawić m.in. odpowiednią częstotliwość próbkowania. Interfejs jest zaprojektowany tak, aby był intuicyjny i łatwy w obsłudze. Na obecnym etapie prace nad UI są zaawansowane w 80\%. Planowane są dalsze udoskonalenia, w tym integracja z modelem analizy emocji oraz poprawa responsywności i estetyki interfejsu. Celem jest zapewnienie użytkownikom wygodnego i efektywnego narzędzia do interakcji z systemem.
 
 
-\subsubsection{Poprawa dokładność sieci}
-W ramach prac nad dokładnością modelu, zostały wykonane testy optymaliacji hiperparametrów sieci.Proces dostosowywania parametrów modelu jest kluczowym krokiem w optymalizacji jego wydajności. Obejmuje to fine-tuning hiperparametrów, takich jak współczynnik uczenia, liczba neuronów w warstwach ukrytych oraz liczba epok treningowych. Dotychczasowe testy sugerują, że dostosowanie tych parametrów może znacząco poprawić dokładność modelu w rozpoznawaniu emocji. Wykazały one, że zwiększeni skomplikowania modelu, spowodowało zmniejszenie biasu, co poskutkowało znacznie lepszymi wynikami kroswalidacji. Obecny najlepszy model osiąga wartośc 76\% dokładności na zbiorze testowym.
+\subsubsection{Poprawa dokładności sieci}
+W ramach prac nad dokładnością modelu, zostały wykonane testy optymaliacji hiperparametrów sieci. Proces dostosowywania parametrów modelu jest kluczowym krokiem w optymalizacji jego wydajności. Obejmuje to fine-tuning hiperparametrów, takich jak współczynnik uczenia, liczba neuronów w warstwach ukrytych oraz liczba epok treningowych. Dotychczasowe testy sugerują, że dostosowanie tych parametrów może znacząco poprawić dokładność modelu w rozpoznawaniu emocji. Wykazały one, że zwiększeni skomplikowania modelu, spowodowało zmniejszenie biasu, co poskutkowało znacznie lepszymi wynikami kroswalidacji. Obecny najlepszy model osiąga wartośc 76\% dokładności na zbiorze testowym.
 \begin{center}
     \includegraphics[width=\textwidth]{img/conf_matrix.png}
 \end{center}
-Można zauważyć, że nowy model znacząco lepiej radzi sobie z klasyfikacją emocji w głosie. Różnica w ilości cech w zbiorze testowym dla emocji "calm" wynika z wybranych zbiorów nagrań głosowych. Pierwszy z nich posiadał 8, a drugi, większy, tylko 7.\\ Dostosowywanie parametrów w celu poprawy wydajności modelu jest zadaniem najbardziej czasochłonnym, które wymagało około tygodnia pracy.
+Można zauważyć, że nowy model znacząco lepiej radzi sobie z klasyfikacją emocji w głosie. Różnica w ilości cech w zbiorze testowym dla emocji "calm" wynika z wybranych zbiorów nagrań głosowych. Pierwszy z nich posiadał 8, a drugi, większy, tylko 7.\\ Dostosowywanie parametrów w celu poprawy wydajności modelu jest zadaniem najbardziej czasochłonnym, które wymagało około tygodnia pracy. 
+Projekt w ok. 90\% jest gotowy.
 
 \section{Zgodność z harmonogramem}
-Projekt jest realizowany zgodnie z harmonogramem
+Projekt jest realizowany zgodnie z harmonogramem. 
 \section{Czy wprowadzono znaczące zmiany do projektu?}
 Nie wprowadzono w tym etapie żadnych znaczących zmian odbiegających od harmongoramu projektu.
 
