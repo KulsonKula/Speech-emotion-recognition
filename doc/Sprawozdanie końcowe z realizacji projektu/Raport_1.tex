@@ -124,12 +124,14 @@ Projekt został zrealizowany zgodnie z założeniami, a wszystkie planowane etap
     \item Zgromadzenie i przetworzenie danych - dane w postaci krótkich nagrań dźwiękowych reprezentujące różne emocje,
     \item Wybór oraz ekstrakcja cech,
     \item Wybór architektury sieci, hiperparametrów, podział danych na zbiór uczący oraz treningowy,
-    \item Trenowanie modelu i optymalizacja parametrów modelu.
+    \item Trenowanie modelu i optymalizacja parametrów modelu. 
     \item Ocena i walidacja modelu,
-    \item Dostosowywanie parametrów modelu w celu poprawy jego wydajności,
-    \item Stworzenie UI pozwalajacego użytkownikowi dodanie pliku dzwiękowego oraz nagrania własnej wiadomości przy pomocy wbudowanego mikrofonu,
+    \item Dostosowywanie parametrów modelu w celu poprawy jego wydajności - Podczas tworzenia pracy, aby poprawić wydajność zdecydowano się na wypróbowanie biblioteki Optuna,
+    \item Stworzenie UI pozwalajacego użytkownikowi dodanie pliku dzwiękowego oraz nagrania własnej wiadomości przy pomocy wbudowanego mikrofonu, a następnie analiza tych nagrań,
     \item Testowanie projektu.
 \end{itemize}
+
+
 
 \subsection{Czy projekt zrealizowany został zgodnie z harmonogramem? Jeśli nie, podać przyczyny opóźnień w odniesieniu do etapów pracy oraz opisać działania naprawcze podjęte aby osiągnąć wyznaczone cele projektu.}
 Projekt jest realizowany zgodnie z harmonogramem
@@ -138,11 +140,13 @@ Projekt jest realizowany zgodnie z harmonogramem
 W trakcie trwania projektu nie wprowadzono żadnych nadzwyczajnych zmian ani w zakresie realizacji zadań projektowych, ani w składzie zespołu projektowego.
 
 \subsection{Doświadczenia uzyskane podczas realizacji projektu. Opisać jaką nową wiedzę uzyskał uczestnik projektu w czasie jego realizacji np. nowe metody programowania, nowe biblioteki, nowe narzędzie itp. (ok 200 słów)}
-Realizacja projektu dotyczącego detekcji emocji w głosie była okazją do zdobycia wiedzy z zakresu przetwarzania sygnałów dźwiękowych. Podczas projektu dowiedzieliśmy się o technikach przetwarzania sygnałów dźwiękowych. Dowiedzieliśmy się o cechach które są przydatne do analizy emocji w głosie, takie jak MFCC, Chroma STFT, Spektogram, chroma, tonacja i inne.
+Realizacja projektu dotyczącego detekcji emocji w głosie była okazją do zdobycia wiedzy z zakresu przetwarzania sygnałów dźwiękowych. Podczas projektu dowiedzieliśmy się o technikach przetwarzania sygnałów dźwiękowych. Projekt pozwolił nam poznać w jakich postaciach można przedstawiać sygnały akustyczne. Dowiedzieliśmy się o cechach które są przydatne do analizy emocji w głosie, takie jak MFCC, Chroma STFT, Spektogram, chroma, tonacja i inne.
 
 Dodatkowo podczas realizacji projektu rozpoznawania emocji w głosie nauczyło się korzystania z biblioteki Librosa do szybkiej ekstrakcji cech dźwiękowych w dziedzinie częstotliwościowej oraz czasowej, co umożliwiło efektywne przetwarzanie danych audio. Opanowano również użycie biblioteki Optuna do optymalizacji hiperparametrów, co pozwoliło na zwiększenie dokładności modelu z 77\% do 80\% na zbiorze testowym. Dodatkowo, zdobyto umiejętności tworzenia graficznych interfejsów użytkownika przy pomocy biblioteki Tkinter, co umożliwiło stworzenie intuicyjnej aplikacji prezentującej wyniki analizy głosu.
+W trakcie projektu zapoznano się także z biblioteką sounddevice, która pozwoliła na nagranie dźwięku poprzez wbudowany mikrofon.
 
 \subsection{Proponowane ulepszenia projektu. Opisać możliwe zmiany w systemie, użytej technologii, narzędziach, które mogłyby prowadzić do ulepszenia projektu.}
 Ulepszenie sieci neuronowej może być trudnym zadaniem, dlatego proponowane zmiany powinny skupić się na wykorzystaniu dodatkowej sieci do rozpoznawania emocji na podstawie mimiki twarzy, ponieważ mimika jest istotnym elementem komunikacji niewerbalnej. Można zastosować bibliotekę OpenCV lub FaceNet do ekstrakcji cech i klasyfikacji emocji. Integracja wyników z analizy dźwięku i obrazu w jednym systemie oraz stworzenie warstwy fuzji pozwoli na bardziej precyzyjne rozpoznawanie emocji.
+Projekt można by było również poprawić pod względem analizy sygnałów poprzez usunięcie ewentualnych szumów. 
 \subsection{Dodać skompresowany kod źródłowy (w osobnym pliku sprawozdania)}
 \end{document}
