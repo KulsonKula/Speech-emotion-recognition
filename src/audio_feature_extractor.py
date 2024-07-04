@@ -31,6 +31,9 @@ class AudioFeatureExtractorApp:
         self.create_plot_canvas()
 
     def create_widgets(self):
+        backgrd = 'gray16'
+        foregrd = 'white'
+        bckgrd2 = 'gray25'
 
         self.frame = tk.Frame(self.master, width=250,
                               height=600, background=bckgrd2)
