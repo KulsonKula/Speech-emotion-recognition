@@ -104,8 +104,7 @@ Paweł Wójtowicz,
 
 
 \newpage
-\section{Analiza wyników i wnioski}
-\subsection{Przedstawić najważniejsze scenariusze użycia stworzonego oprogramowania.}
+\section{Przedstawić najważniejsze scenariusze użycia stworzonego oprogramowania.}
 Wsparcie w obsłudze klienta:
 Program może być zintegrowany z systemami call center, gdzie automatycznie analizuje emocje klientów podczas rozmów. Na podstawie wykrytych emocji, takich jak frustracja czy zadowolenie, system może przekazywać zgłoszenia do odpowiednich działów lub oferować automatyczne rozwiązania, poprawiając jakość obsługi klienta\\
 
@@ -115,9 +114,7 @@ W trakcie rekrutacji i rozmów kwalifikacyjnych program może analizować emocje
 Interaktywne systemy rozrywki:
 Program może być używany w grach komputerowych i aplikacjach VR/AR, gdzie analizuje emocje graczy, aby dostosować poziom trudności gry, fabułę lub interakcje z postaciami w czasie rzeczywistym. Dzięki temu doświadczenie z gry staje się bardziej immersyjne i spersonalizowane.\\
 
-\subsection{Do sprawozdania można dołączyć wideo prezentujące użycie scenariuszy (w osobnym pliku sprawozdania). Także w tym wypadku zespół, może być nadal zobowiązany do prezentacji wyników projektu na zajęciach.}
-
-\subsection{Czy projekt zrealizowany został zgodnie z założeniami? Jeśli nie,podać przyczyny odstępstw od pierwotnych założeń. Należy odnieść się do zaakceptowanego dokumentu Informacje o realizowanym projekcie}
+\section{Realizacja projektu}
 Projekt został zrealizowany zgodnie z założeniami, a wszystkie planowane etapy w projekcie zostały ukończone. Poniżej przedstawiono opis zrealizowanych etapów:
 
 \begin{itemize}
@@ -131,24 +128,25 @@ Projekt został zrealizowany zgodnie z założeniami, a wszystkie planowane etap
     \item Testowanie projektu.
 \end{itemize}
 
+Projekt jest realizowany zgodnie z harmonogramem\\
 
-
-\subsection{Czy projekt zrealizowany został zgodnie z harmonogramem? Jeśli nie, podać przyczyny opóźnień w odniesieniu do etapów pracy oraz opisać działania naprawcze podjęte aby osiągnąć wyznaczone cele projektu.}
-Projekt jest realizowany zgodnie z harmonogramem
-
-\subsection{Czy wystąpiły jakieś nadzwyczajne wydarzenia w trakcie realizacji projektu? Czy wprowadzono jakieś znaczące zmiany do zrealizowanych działań lub w składzie zespołu? Jeśli tak, opisać jakie oraz podać ich wpływ na realizację projektu.}
 W trakcie trwania projektu nie wprowadzono żadnych nadzwyczajnych zmian ani w zakresie realizacji zadań projektowych, ani w składzie zespołu projektowego.
 
-\subsection{Doświadczenia uzyskane podczas realizacji projektu. Opisać jaką nową wiedzę uzyskał uczestnik projektu w czasie jego realizacji}
+\section{Doświadczenia uzyskane podczas realizacji projektu.}
 Realizacja projektu dotyczącego detekcji emocji w głosie była okazją do zdobycia wiedzy z zakresu przetwarzania sygnałów dźwiękowych. Podczas projektu dowiedzieliśmy się o technikach przetwarzania sygnałów dźwiękowych. Projekt pozwolił nam poznać w jakich postaciach można przedstawiać sygnały akustyczne. Dowiedzieliśmy się o cechach które są przydatne do analizy emocji w głosie, takie jak MFCC, Chroma STFT, Spektogram, chroma, tonacja i inne.
 
 Dodatkowo podczas realizacji projektu rozpoznawania emocji w głosie nauczyło się korzystania z biblioteki Librosa do szybkiej ekstrakcji cech dźwiękowych w dziedzinie częstotliwościowej oraz czasowej, co umożliwiło efektywne przetwarzanie danych audio. Kolejnym istotnym doświadczeniem podczas realizacji projektu była praca z metodami uczenia maszynowego przeznaczonymi do klasyfikacji emocji w głosie. W ramach projektu zagłębiliśmy wiedzy z zakresu różnych architektur sieci neuronowych takich jak: CNN czy RNN oraz nabyliśmy wiedzy z praktycznego wykorzystania biblioteki TensorFlow.
 Opanowano również użycie biblioteki Optuna do optymalizacji hiperparametrów, co pozwoliło na zwiększenie dokładności modelu z 77\% do 80\% na zbiorze testowym. Dodatkowo, zdobyto umiejętności tworzenia graficznych interfejsów użytkownika przy pomocy biblioteki Tkinter, co umożliwiło stworzenie intuicyjnej aplikacji prezentującej wyniki analizy głosu.
 W trakcie projektu zapoznano się także z biblioteką sounddevice, która pozwoliła na nagranie dźwięku poprzez wbudowany mikrofon.
 
-\subsection{Proponowane ulepszenia projektu. Opisać możliwe zmiany w systemie, użytej technologii, narzędziach, które mogłyby prowadzić do ulepszenia projektu.}
+\section{Proponowane ulepszenia projektu.}
 Ulepszenie sieci neuronowej może być trudnym zadaniem, dlatego proponowane zmiany powinny skupić się na wykorzystaniu dodatkowej sieci do rozpoznawania emocji na podstawie mimiki twarzy, ponieważ mimika jest istotnym elementem komunikacji niewerbalnej. Można zastosować bibliotekę OpenCV lub FaceNet do ekstrakcji cech i klasyfikacji emocji. Integracja wyników z analizy dźwięku i obrazu w jednym systemie oraz stworzenie warstwy fuzji pozwoli na bardziej precyzyjne rozpoznawanie emocji.
 Projekt można by było również poprawić pod względem analizy sygnałów poprzez usunięcie ewentualnych szumów.
 Innym zaproponowanym ulepszeniem jest wykorzystanie innej architektury sieci neuronowej takiej jak Long Short-Term Memory (LSTM), która pozwala na skuteczne przetwarzanie sekwencyjnych danych. Architektura LSTM charakteryzuje się zdolnością do przechowywania informacji przez dłuższy okres, co jest kluczowe dla analizy długoterminowych zależności w sygnałach dźwiękowych
-\subsection{Dodać skompresowany kod źródłowy (w osobnym pliku sprawozdania)}
+\section{Lista dodatkowych plików}
+\begin{itemize}
+    \item src.rar - kody źródłowe służące do przetwarzania danych, nauki modelu ich ewaluacji oraz aplikacja służąca do rozpoznawania emocji w głosie
+    \item prezentacja\_1.mp4 -- przedstawienie mozliwość odczytu pliku
+    \item prezentacja\_2.mp4 -- przedstawienie mozliwość użcia mikrofonu
+\end{itemize}
 \end{document}
